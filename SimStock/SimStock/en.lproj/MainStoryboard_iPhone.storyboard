@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Stock Info View Controller - Stock Information-->
+        <scene sceneID="sTR-8h-q6D">
+            <objects>
+                <tableViewController id="aY1-tj-cd4" customClass="StockInfoViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="51" sectionHeaderHeight="22" sectionFooterHeight="22" id="7k1-J3-Kty">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="51" id="8jl-9Z-pQv" customClass="SSStockCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Stock Information" image="information.png" id="Agn-h8-ZGg"/>
+                    <navigationItem key="navigationItem" id="NK0-yd-Zyu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTC-D7-yeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="468"/>
+        </scene>
+        <!--Stock Log View Controller - History Data-->
+        <scene sceneID="CA0-Cb-PHZ">
+            <objects>
+                <tableViewController id="07X-Zi-w1L" customClass="SSStockLogViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="yWX-yH-TGw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="70" id="Sdf-0N-sGq" customClass="SSStockLogCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="07X-Zi-w1L" id="Res-LP-qXg"/>
+                            <outlet property="delegate" destination="07X-Zi-w1L" id="IDw-7T-i7m"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="History Data" image="history.png" id="sve-HW-Xdu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwH-eS-2n7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="468"/>
+        </scene>
+        <!--Stock Bid View Controller-->
+        <scene sceneID="JRF-B2-Bbi">
+            <objects>
+                <viewController storyboardIdentifier="StockBid" id="jnD-Oe-oVu" customClass="SSStockBidViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRB-ha-RXP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="page.png" id="NeY-3n-ynL">
+                                <rect key="frame" x="0.0" y="1" width="320" height="422"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="Jdq-lG-leD">
+                                <rect key="frame" x="197" y="73" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="b8N-KY-S3K">
+                                <rect key="frame" x="33" y="188" width="255" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="jnD-Oe-oVu" eventType="valueChanged" id="4qT-I8-cdi"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mvR-6W-kCl">
+                                <rect key="frame" x="35" y="299" width="119" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="全部购" image="buyin.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="buy.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyAll:" destination="jnD-Oe-oVu" eventType="touchUpInside" id="f1g-wi-yfd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IPP-DE-8lz">
+                                <rect key="frame" x="162" y="299" width="124" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="全部售出" image="soldout.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sellOut:" destination="jnD-Oe-oVu" eventType="touchUpInside" id="glL-Dz-ARA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5TX-CP-lE5">
+                                <rect key="frame" x="35" y="354" width="119" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="完成交易" image="accomplish.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="complete:" destination="jnD-Oe-oVu" eventType="touchUpInside" id="QlO-qu-bak"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aZp-4t-5zm">
+                                <rect key="frame" x="162" y="354" width="124" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="取消交易" image="cancel.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="jnD-Oe-oVu" eventType="touchUpInside" id="tc2-bG-AmO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="DSf-I3-7kW">
+                                <rect key="frame" x="197" y="226" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="SfH-Hh-iuY">
+                                <rect key="frame" x="181" y="107" width="128" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="niU-yr-f2p">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="lfj-IG-fPd">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="TNI-cy-fA3">
+                                            <connections>
+                                                <action selector="back:" destination="jnD-Oe-oVu" id="IAB-Rp-Fzh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Detail" id="s3z-cR-mz1">
+                                            <connections>
+                                                <action selector="detail:" destination="jnD-Oe-oVu" id="IQI-BW-Pyg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="4PP-02-FPB">
+                                <rect key="frame" x="197" y="268" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="casher" destination="4PP-02-FPB" id="3KT-kK-tXK"/>
+                        <outlet property="forecast" destination="SfH-Hh-iuY" id="aJC-DN-3xd"/>
+                        <outlet property="hands" destination="DSf-I3-7kW" id="TBg-T6-VzS"/>
+                        <outlet property="handsHold" destination="Jdq-lG-leD" id="wbh-5b-28n"/>
+                        <outlet property="slider" destination="b8N-KY-S3K" id="aj6-CL-aOt"/>
+                        <outlet property="titleView" destination="lfj-IG-fPd" id="sKl-Zi-D4w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKi-KF-8h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="1069"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kjz-oH-caN" kind="relationship" relationship="viewControllers" id="RHO-3x-JAN"/>
+                        <segue destination="aY1-tj-cd4" kind="relationship" relationship="viewControllers" id="omq-lJ-qhE"/>
+                        <segue destination="07X-Zi-w1L" kind="relationship" relationship="viewControllers" id="q4Y-80-IP4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-454" y="477"/>
+        </scene>
+        <!--Start View Controller - My account-->
+        <scene sceneID="bry-ji-78z">
+            <objects>
+                <viewController id="kjz-oH-caN" customClass="SSStartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xKX-8V-1dw" customClass="SSStartView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My account" image="account.png" id="yYj-mD-VQ8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50R-Ch-Awf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="1075"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="accomplish.png" width="926" height="244"/>
+        <image name="account.png" width="30" height="30"/>
+        <image name="buy.png" width="192" height="55"/>
+        <image name="buyin.png" width="926" height="244"/>
+        <image name="cancel.png" width="926" height="244"/>
+        <image name="history.png" width="30" height="30"/>
+        <image name="information.png" width="30" height="30"/>
+        <image name="page.png" width="480" height="640"/>
+        <image name="soldout.png" width="926" height="244"/>
+    </resources>
+    <classes>
+        <class className="SSStartView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStartView.h"/>
+        </class>
+        <class className="SSStartViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStartViewController.h"/>
+        </class>
+        <class className="SSStockBidViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStockBidViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+                <relationship kind="action" name="buyAll:"/>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="complete:"/>
+                <relationship kind="action" name="detail:"/>
+                <relationship kind="action" name="sellOut:"/>
+                <relationship kind="action" name="valueChanged:"/>
+                <relationship kind="outlet" name="casher" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="forecast" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hands" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="handsHold" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="titleView" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="SSStockCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStockCell.h"/>
+        </class>
+        <class className="SSStockLogCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStockLogCell.h"/>
+        </class>
+        <class className="SSStockLogViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SSStockLogViewController.h"/>
+        </class>
+        <class className="StockInfoViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StockInfoViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
